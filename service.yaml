@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: pokemon-amonaco-service
+  namespace: demo-argocd-amonaco
+  labels:
+    app: pokemon-amonaco
+spec:
+  selector:
+    app: pokemon-amonaco
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
